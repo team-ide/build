@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-    paths: [ "*.go","go.*"]
+    paths: [ "*.go","go.*",".github/workflows/test-linux.yml"]
 jobs:
   build-amd64:
     runs-on: ubuntu-latest
@@ -28,7 +28,7 @@ jobs:
 
       - name: Build linux-amd64
         run: |
-          chmod +x build.sh
+          chmod +x cmd/build-amd64.sh
           docker run --platform linux/amd64 -v $(pwd):/build teamide/build-go-gcc:amd64-1.20.14-14.2.0 /bin/bash /build/cmd/build-amd64.sh
 
   build-arm64:
@@ -54,6 +54,6 @@ jobs:
 
       - name: Build linux-arm64
         run: |
-          chmod +x build.sh
+          chmod +x cmd/build-arm64.sh
           docker run --platform linux/arm64 -v $(pwd):/build teamide/build-go-gcc:arm64-1.20.14-14.2.0 /bin/bash /build/cmd/build-arm64.sh
 
