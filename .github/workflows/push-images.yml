@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-    paths: [ "Dockerfile" ]
+    paths: [ "Dockerfile*" ]
 jobs:
   build-push-images:
     runs-on: ubuntu-latest
@@ -26,15 +26,9 @@ jobs:
       - name: Docker Build amd64
         run: docker build --platform=linux/amd64 -t teamide/build-go-gcc:amd64-1.20.14-14.2.0 .
       - name: Docker Push amd64
-        run: docker push teamide/build-go-gcc:1.20.14-14.2.0
+        run: docker push teamide/build-go-gcc:amd64-1.20.14-14.2.0
 
       - name: Docker Build arm64
         run: docker build --platform=linux/arm64 -t teamide/build-go-gcc:arm64-1.20.14-14.2.0 .
       - name: Docker Push arm64
-        run: docker push teamide/build-go-gcc:1.20.14-14.2.0
-        
-      - name: Docker Build ppc64le
-        run: docker build --platform=linux/ppc64le -t teamide/build-go-gcc:ppc64le-1.20.14-14.2.0 .
-      - name: Docker Push ppc64le
-        run: docker push teamide/build-go-gcc:1.20.14-14.2.0
-
+        run: docker push teamide/build-go-gcc:arm64-1.20.14-14.2.0
