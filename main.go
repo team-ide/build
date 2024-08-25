@@ -1,8 +1,8 @@
 package main
 
 import (
-	_ "github.com/team-ide/go-driver/db_gbase"
-	_ "github.com/team-ide/go-driver/db_odbc"
+	// _ "github.com/team-ide/go-driver/db_gbase"
+	// _ "github.com/team-ide/go-driver/db_odbc"
 	_ "github.com/team-ide/go-tool/db/db_type_dm"
 	_ "github.com/team-ide/go-tool/db/db_type_gbase"
 	_ "github.com/team-ide/go-tool/db/db_type_kingbase"
