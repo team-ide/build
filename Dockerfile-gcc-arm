@@ -1,0 +1,9 @@
+FROM --platform=linux/arm64 gcc:12.4 as arm64-gcc
+
+FROM alpine:latest
+
+RUN mkdir -p /usr/local/gcc/
+COPY --from=arm64-gcc /usr/local/libexec/gcc/aarch64-linux-gnu /usr/local/gcc/arm64-linux-gnu
+
+
+# docker build --platform=linux/arm64 -t teamide/build-gcc:arm64-12.4 .
