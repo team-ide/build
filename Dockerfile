@@ -1,6 +1,6 @@
 FROM  golang:1.20.14 AS golang
 
-FROM gcc:14.2.0
+FROM gcc:10.4.0
 
 COPY --from=golang /usr/local/go /usr/local/go
 
