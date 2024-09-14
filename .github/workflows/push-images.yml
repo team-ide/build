@@ -24,9 +24,9 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Docker Build amd64
-        run: docker build --platform=linux/amd64 -t teamide/build-go-gcc:amd64-1.20.14-7.5.0 .
+        run: docker build --platform=linux/amd64 -t teamide/build-go-gcc:amd64-1.20.14-8.3.0 .
       - name: Docker Push amd64
-        run: docker push teamide/build-go-gcc:amd64-1.20.14-7.5.0
+        run: docker push teamide/build-go-gcc:amd64-1.20.14-8.3.0
 
   build-push-arm64:
     runs-on: ubuntu-latest
@@ -47,6 +47,6 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Docker Build arm64
-        run: docker build --platform=linux/arm64 -t teamide/build-go-gcc:arm64-1.20.14-7.5.0 .
+        run: docker build --platform=linux/arm64 -t teamide/build-go-gcc:arm64-1.20.14-8.3.0 .
       - name: Docker Push arm64
-        run: docker push teamide/build-go-gcc:arm64-1.20.14-7.5.0
+        run: docker push teamide/build-go-gcc:arm64-1.20.14-8.3.0
