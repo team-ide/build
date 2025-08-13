@@ -1,0 +1,11 @@
+# main
+deb [check-valid-until=no] http://mirrors.cloud.tencent.com/debian-archive/debian/ stretch main non-free contrib
+deb-src [check-valid-until=no] http://mirrors.cloud.tencent.com/debian-archive/debian/ stretch main non-free contrib
+
+# sercurity
+#deb http://mirrors.cloud.tencent.com/debian-archive/debian-security/  stretch/updates main contrib non-free
+#deb-src http://mirrors.cloud.tencent.com/debian-archive/debian-security/  stretch/updates main contrib non-free
+
+# backports
+#deb [check-valid-until=no] http://mirrors.cloud.tencent.com/debian-archive/debian/ stretch-backports main non-free contrib
+#deb-src [check-valid-until=no] http://mirrors.cloud.tencent.com/debian-archive/debian/ stretch-backports main non-free contrib

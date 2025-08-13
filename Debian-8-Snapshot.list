@@ -1,0 +1,7 @@
+#Debian8 Base Snapshot
+deb [check-valid-until=no] http://snapshot.debian.org/archive/debian/20200708T204754Z/ jessie main contrib non-free
+deb-src [check-valid-until=no] http://snapshot.debian.org/archive/debian/20200708T204754Z/ jessie main contrib non-free
+
+#Debian Security/
+#deb http://snapshot.debian.org/archive/debian-security/20200708T204823Z/ jessie/updates main contrib non-free
+#deb-src http://snapshot.debian.org/archive/debian-security/20200708T204823Z/ jessie/updates main contrib non-free
