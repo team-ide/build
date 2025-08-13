@@ -47,6 +47,6 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Docker Build arm64
-        run: docker build -t teamide/build-go-gcc:arm64-1.24.6-6.5.0 .
+        run: docker build --platform=linux/arm64 -t teamide/build-go-gcc:arm64-1.24.6-6.5.0 .
       - name: Docker Push arm64
         run: docker push teamide/build-go-gcc:arm64-1.24.6-6.5.0
