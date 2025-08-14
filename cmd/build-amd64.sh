@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 set -ex;
 
@@ -8,13 +8,13 @@ cd /build
 echo `pwd`
 
 echo "set go env GOFLAGS"
-/usr/local/go/bin/go env -w GOFLAGS="-buildvcs=false"
+go env -w GOFLAGS="-buildvcs=false"
 
-/usr/local/go/bin/go mod tidy
+go mod tidy
 
 echo "build start"
 
-CGO_ENABLED=1 GOOS=linux GOARCH=amd64 /usr/local/go/bin/go \
+CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go \
 build -ldflags "-s" -o /build/build-linux-amd64 .
 
 echo "build success"
