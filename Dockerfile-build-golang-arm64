@@ -1,10 +1,11 @@
 FROM golang:1.24.10
 
 # 安装必要的依赖和工具
-RUN apt-get update && apt-get add --no-cache \
+RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
     unixodbc \
-    unixodbc-dev
+    unixodbc-dev \
+    & apt-get clean
 
 WORKDIR /app

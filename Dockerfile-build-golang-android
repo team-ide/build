@@ -1,11 +1,12 @@
 FROM golang:1.24.10
 
 # 安装必要的依赖和工具
-RUN apt-get update && apk apt-get --no-cache \
+RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
     unixodbc \
-    unixodbc-dev
+    unixodbc-dev \
+    & apt-get clean
 
 
 RUN wget https://googledownloads.cn/android/repository/android-ndk-r28c-linux.zip -O /tmp/ndk.zip && \
