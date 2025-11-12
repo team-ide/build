@@ -24,6 +24,6 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Docker Build
-        run: docker build -f Dockerfile-build-golang-android -t teamide/build-golang-android:1.24.6-r28c .
+        run: docker build -f Dockerfile-build-golang-android -t teamide/build-golang-android:1.24.10-r28c .
       - name: Docker Push
-        run: docker push teamide/build-golang-android:1.24.6-r28c
+        run: docker push teamide/build-golang-android:1.24.10-r28c
